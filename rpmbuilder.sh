@@ -28,7 +28,7 @@ RETURN_CODE=$?
     if [ $RETURN_CODE != 0 ]
     then
         echo -e "Specified HAproxy version is not available"
-        exit 2
+        exit $RETURN_CODE
     fi
 
 echo "checking for dependencies:"
