@@ -23,6 +23,14 @@ if [  $# -le 1 ]
 		exit 1
 fi 
 
+curl --output /dev/null --silent --head --fail "http://www.haproxy.org/download/$haproxyver/src/haproxy-$haproxyver.$haproxyrel.tar.gz"
+RETURN_CODE=$?
+    if [ $RETURN_CODE != 0 ]
+    then
+        echo -e "Specified HAproxy version is not available"
+        exit 2
+    fi
+
 echo "checking for dependencies:"
 
 # populating text file with installed packages to check against
