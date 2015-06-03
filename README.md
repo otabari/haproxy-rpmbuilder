@@ -11,4 +11,5 @@ example:
 ./haproxy-rpmbuilder 1.5 12
 
 Run this script as an unprivileged user since "mock" will not run as root.
- 
+
+created RPMS can be moved to local yum repo for deployment
