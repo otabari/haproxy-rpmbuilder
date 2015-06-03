@@ -55,6 +55,13 @@ echo "Downloading sources..."
 if [ ! -f ~/rpmbuild/SOURCES/haproxy-$haproxyver.$haproxyrel.tar.gz ];
 then
     wget "http://www.haproxy.org/download/$haproxyver/src/haproxy-$haproxyver.$haproxyrel.tar.gz" -O ~/rpmbuild/SOURCES/haproxy-$haproxyver.$haproxyrel.tar.gz
+    RETURN_CODE=$?
+    if [ $RETURN_CODE != 0 ]; then
+        echo -e "Specified HAproxy version is not available"
+        exit 2
+    else
+        echo "Downloaded HAProxy $haproxyver-$haproxyrel"
+    fi
 fi
 
 cd ~/rpmbuild/SOURCES/
