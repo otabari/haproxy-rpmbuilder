@@ -7,7 +7,7 @@ RED='\033[0;31m'
 DEFCOLOR='\033[0m'
 GREEN='\e[0;32m'
 
-packages="gcc wget pcre pcre-devel socat openssl-devel openssl rpm-build mock"
+packages="gcc wget pcre pcre-devel socat openssl-devel openssl rpm-build mock gcc"
 missing_pkgs=""
 
 display_usage() { 
