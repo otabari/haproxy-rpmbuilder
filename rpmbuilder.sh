@@ -48,7 +48,7 @@ if [ $is_missing -gt 0 ]
     then echo "missing packages found, script aborting" && exit 1
 fi
 
-rm -rf ~/rpmbuild/{BUILD,BUILDROOT,SRPMS}/haproxy* || true
+rm -rf ~/rpmbuild/
 mkdir -p ~/rpmbuild/{BUILD,BUILDROOT,SOURCES,RPMS,SRPMS}
 
 echo "Downloading sources..."
