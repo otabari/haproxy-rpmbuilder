@@ -13,3 +13,9 @@ example:
 Run this script as an unprivileged user since "mock" will not run as root.
 
 created RPMS can be moved to local yum repo for deployment
+sample yum repo file:
+
+[local-repo]
+baseurl=http://<IP ADDRESS>/$releasever/
+enabled=0
+
