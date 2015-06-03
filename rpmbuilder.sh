@@ -34,9 +34,11 @@ for pkg in $packages
 	do
 		if grep -q $pkg /tmp/all-packages.txt 
 			then echo -e "package $pkg is installed.... ${GREEN} OK ${DEFCOLOR} "
+			sleep 0.5
 		else
 			echo -e "package $pkg is ${RED}NOT${DEFCOLOR} installed.... ${RED} FAIL ${DEFCOLOR}"
 			missing_pkgs="$missing_pkgs $pkg"
+			sleep 0.5
 		fi
 	done
 
